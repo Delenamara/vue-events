@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Oswald', sans-serif;
+    background-color: #030a21;
+    color: #060822;
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+}
+
+nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    padding: 16px 20px;
+    text-decoration: none;
+    color: #8a8d96;
+    font-weight: 400;
+}
+
+nav a:hover {
+    color: #272727;
+}
+
+.roundHex {
+    position: absolute;
+    top: 120px;
+    left: 50%;
+    margin-left: -75px;
+    /*margin: 0 auto;*/
+    background: rgba(255, 255, 255);
+    border-radius: 10px;
+    height: 260px;
+    width: 158px;
+    line-height: 260px;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+}
+
+.roundHex:before,
+.roundHex:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: inherit;
+    border-radius: inherit;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
+.roundHex:before {
+    -webkit-transform: rotate(60deg);
+    -moz-transform: rotate(60deg);
+    transform: rotate(60deg);
+}
+
+.roundHex:after {
+    -webkit-transform: rotate(-60deg);
+    -moz-transform: rotate(-60deg);
+    transform: rotate(-60deg);
+}
+
+.roundHex:hover {
+    background: tomato;
+}
+
+.switch-transition {
+    transition: all .5s ease-in-out;
+}
+
+.switch-enter {
+    left: 100%;
+}
+
+.switch-leave {
+    left: -100%;
+}

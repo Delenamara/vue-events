@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+    <header>
+        <nav>
+            <a href="#" @click="switchView('hexagon1')">1</a>
+            <a href="#" @click="switchView('hexagon2')">2</a>
+            <a href="#" @click="switchView('hexagon3')">3</a>
+            <a href="#" @click="switchView('hexagon4')">4</a>
+            <a href="#" @click="switchView('hexagon5')">5</a>
+        </nav>
+    </header>
+
+    <component :is="currentView" transition="switch"></component>
+</div>
+
+<template id="hexagon-template-1">
+    <div class="hexagon1 roundHex">1</div>
+</template>
+
+<template id="hexagon-template-2">
+    <div class="hexagon2 roundHex">2</div>
+</template>
+
+<template id="hexagon-template-3">
+    <div class="hexagon3 roundHex">3</div>
+</template>
+
+<template id="hexagon-template-4">
+    <div class="hexagon4 roundHex">4</div>
+</template>
+
+<template id="hexagon-template-5">
+    <div class="hexagon5 roundHex">5</div>
+</template>
+
+
+<script src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.26/vue.min.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
