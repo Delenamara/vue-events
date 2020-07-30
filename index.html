@@ -3,20 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/solid.css" integrity="sha384-29Ax2Ao1SMo9Pz5CxU1KMYy+aRLHmOu6hJKgWiViCYpz3f9egAJNwjnKGgr+BXDN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div id="app">
     <header>
-        <nav>
-            <a href="#" @click="switchView('hexagon1')">1</a>
-            <a href="#" @click="switchView('hexagon2')">2</a>
-            <a href="#" @click="switchView('hexagon3')">3</a>
-            <a href="#" @click="switchView('hexagon4')">4</a>
-            <a href="#" @click="switchView('hexagon5')">5</a>
-        </nav>
+        <ul>
+            <li id="link-1"><a href="#">БИЛЕТЫ И АБОНИМЕНТЫ</a></li>
+            <li class="hidden" id="link-2"><a href="#">Как купить?</a></li>
+            <li class="hidden" id="link-3"><a href="#">Правила</a></li>
+            <li class="hidden" id="link-4"><a href="#">Возврат билетов</a></li>
+            <li class="hidden" id="link-5"><a href="#">Войти</a></li>
+            <li class="drop-down-menu" id="link-6"><a href="#"></a></li>
+        </ul>
     </header>
+    <nav>
+        <a href="#" @click="switchView('hexagon1')">1</a>
+        <a href="#" @click="switchView('hexagon2')">2</a>
+        <a href="#" @click="switchView('hexagon3')">3</a>
+        <a href="#" @click="switchView('hexagon4')">4</a>
+        <a href="#" @click="switchView('hexagon5')">5</a>
+    </nav>
 
     <component :is="currentView" transition="switch"></component>
 </div>
